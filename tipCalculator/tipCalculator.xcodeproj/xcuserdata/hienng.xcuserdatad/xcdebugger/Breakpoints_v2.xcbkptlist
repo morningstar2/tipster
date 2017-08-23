@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tipCalculator/TipsterViewController.swift"
+            timestampString = "525210793.219413"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "hideTotalDueView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tipCalculator.TipsterViewController.hideTotalDueView () -&gt; ()"
+                  moduleName = "tipCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hienng/Documents/ios/tipCalculator/tipCalculator/TipsterViewController.swift"
+                  timestampString = "525160194.410155"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "468">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tipCalculator.TipsterViewController.(hideTotalDueView () -&gt; ()).(closure #1)"
+                  moduleName = "tipCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hienng/Documents/ios/tipCalculator/tipCalculator/TipsterViewController.swift"
+                  timestampString = "525160194.419309"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tipCalculator.TipsterViewController.(hideTotalDueView () -&gt; ()).(closure #2)"
+                  moduleName = "tipCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hienng/Documents/ios/tipCalculator/tipCalculator/TipsterViewController.swift"
+                  timestampString = "525160194.420826"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tipCalculator/SettingsViewController.swift"
+            timestampString = "525198128.398069"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
