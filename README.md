@@ -26,7 +26,6 @@ The following **additional** features are implemented:
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
-![Demo](https://github.com/morningstar2/tipster/blob/master/tipster.gif)
 <img src='https://github.com/morningstar2/tipster/blob/master/tipster.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
