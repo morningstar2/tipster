@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tipCalculator/TipsterViewController.swift"
-            timestampString = "525214129.946534"
+            timestampString = "525215700.430211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "hideTotalDueView()"
             landmarkType = "7">
             <Locations>

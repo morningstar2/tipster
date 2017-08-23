@@ -143,12 +143,19 @@ class TipsterViewController: UIViewController {
     }
     
     func hideTotalDueView(){
+    
+        billAmount.alpha = 0.3
         
         if !(self.totalDueView.isHidden) {
             
             UIView.animate(withDuration: 0.4, animations: {
+                
+                self.totalDueView.frame = CGRect(x: self.view.frame.maxX, y: self.view.frame.maxY, width: self.detailViewRect.width, height: self.detailViewRect.height)
+                self.billAmount.alpha = 1
+            
+            }, completion: {
+                (value: Bool) in
                 self.totalDueView.isHidden = true
-                self.totalDueView.frame = self.detailViewRect
             })
         }
         
