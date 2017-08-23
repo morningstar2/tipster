@@ -23,6 +23,7 @@ class TipsterViewController: UIViewController {
     var tipPercentages = [15,18,20]
     
     let BILL_AMOUNT = "TIPSTER_BILL_AMOUNT"
+    let TIMESTAMP = "TIMESTAMP"
     let FIRST_TIP = "FIRST_TIP"
     let SECOND_TIP = "SECOND_TIP"
     let THIRD_TIP = "THIRD_TIP"
@@ -56,12 +57,40 @@ class TipsterViewController: UIViewController {
         if(storedValues.maxSplit == 0){
             saveToStore(10, key: MAX_SPLIT)
         }
+        
+        //set up to get notified when application enters background
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(TipsterViewController.applicationDidEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        
+        let defaults = UserDefaults.standard
+        let storedBillAmount = defaults.object(forKey: BILL_AMOUNT) as! String?
+        let storedTimestamp = defaults.object(forKey: TIMESTAMP) as! Date?
+        self.billAmount.text = nil
+        
+        if storedTimestamp != nil {
+            let elapsedTime = Date().timeIntervalSince(storedTimestamp!)
+            let elapsedTimeInMins = elapsedTime / 60
+            if elapsedTimeInMins < 10 {  //if the app restarted 10mins or less from the last used, show the stored bill amount
+                self.billAmount.text = storedBillAmount
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func applicationDidEnterBackground() {
+        
+        let lastBill = self.billAmount.text
+        let defaults = UserDefaults.standard
+        
+        defaults.set(lastBill, forKey:BILL_AMOUNT)
+        defaults.set(Date(), forKey:TIMESTAMP)
+        defaults.synchronize()
+    }
+
     
     
     @IBAction func onSplitBetweenStepChanged(_ sender: UIStepper) {
@@ -170,10 +199,10 @@ class TipsterViewController: UIViewController {
         tipControlSegment.setTitle("\(savedValues.firstTip)%", forSegmentAt: 0)
         tipControlSegment.setTitle("\(savedValues.secondTip)%", forSegmentAt: 1)
         tipControlSegment.setTitle("\(savedValues.thirdTip)%", forSegmentAt: 2)
-        
         tipPercentages = [savedValues.firstTip, savedValues.secondTip, savedValues.thirdTip]
-        
         splitBetweenStepper.maximumValue = Double(savedValues.maxSplit)
+        
+        onBillAmountChanged(NSNull.self)
         
         if !totalDueView.isHidden {
             let tipPercentage = tipPercentages[tipControlSegment.selectedSegmentIndex]
